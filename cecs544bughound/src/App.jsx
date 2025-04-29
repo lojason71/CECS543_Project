@@ -13,6 +13,11 @@ import Login from "./components/Login";
 import { AuthProvider } from "../context/AuthContext";
 import AddArea from "./components/AddArea";
 import EditArea from "./components/EditArea";
+import NewBugReportForm from "./components/NewBugReportForm";
+import UpdateBugReportForm from "./components/UpdateBugReportForm";
+import BugSearchForm from "./components/BugSearchForm";
+import BugSearchResults from "./components/BugsSearchResult";
+
 function App() {
   return (
     <AuthProvider>
@@ -26,6 +31,11 @@ function App() {
         <Route path="/areas/edit-add" element={<AddEditArea />} />
         <Route path="/areas/add" element={<AddArea />} />
         <Route path="/areas/edit" element={<EditArea />} />
+        <Route path="/bugs/new" element={<NewBugReportForm />} />
+        <Route path="/bugs/update" element={<UpdateBugReportForm />} />
+        <Route path="/bugs/search" element={<BugSearchForm />} />
+        <Route path="/bugs/results" element={<BugSearchResults/>} />
+
 
         <Route path="/programs" element={<Programs />} />
         <Route path="/programs/edit" element={<EditProgram />} />
